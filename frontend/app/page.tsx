@@ -225,4 +225,4 @@ export default function Home() {
   );
 }
 
-function Brand() { return <div className="brand"><span className="brand-icon">S</span><span>safer<span>dig</span></span></div>; }
+function Brand() { return <div className="brand"><span className="brand-icon" aria-hidden="true">✓</span><span>Safer<span>Dig</span></span></div>; }
