@@ -46,7 +46,11 @@ def _db(fn, *a):
 
 
 @router.post("/intentions", response_model=IntentionOut, status_code=201)
-def create_intention(body: IntentionCreate, user: CurrentUser = Depends(_limited), repo: Repository = Depends(get_repo)):
+def create_intention(
+    body: IntentionCreate,
+    user: CurrentUser = Depends(_limited),
+    repo: Repository = Depends(get_repo),
+):
     data = body.model_dump()
     return _present(_db(repo.create, user.id, data))
 
