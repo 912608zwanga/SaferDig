@@ -11,7 +11,7 @@ from .routes.api import router
 logging.basicConfig(level=logging.INFO, format='{"level":"%(levelname)s","logger":"%(name)s","msg":"%(message)s"}')
 settings = get_settings()
 app = FastAPI(
-    title="IntentGuard API",
+    title="SaferDig API",
     version="1.0.0",
     description="Simulation only. Not connected to any bank.",
     docs_url=None if settings.environment == "production" else "/docs",
