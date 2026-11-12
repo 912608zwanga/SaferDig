@@ -31,7 +31,7 @@ def normalize_text(value: str | None) -> str:
     if not value:
         return ""
     text = unicodedata.normalize("NFKC", value)
-    return re.sub(r"\\s+", " ", text).strip().casefold()
+    return re.sub(r"\s+", " ", text).strip().casefold()
 
 
 def parse_amount(value: str | int | Decimal) -> Decimal:
